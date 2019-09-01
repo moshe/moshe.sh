@@ -1,7 +1,7 @@
 <template>
   <div class="text-center">
     <v-btn color="blue-grey" class="white--text">
-      Download CV as PDF
+      Download as PDF
       <v-icon right>cloud_download</v-icon>
     </v-btn>
   </div>

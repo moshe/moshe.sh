@@ -1,8 +1,8 @@
 <template>
   <div>
-    <section-header icon="contact_phone" class="mb-3"
-      >Personal Details</section-header
-    >
+    <section-header icon="contact_phone" class="mb-3">
+      Personal Details
+    </section-header>
     <v-layout class="mt-2" row v-for="line of details" :key="line.key">
       <v-flex xs4>
         <div style="font-weight: 500">{{ line.key }}</div>
