@@ -63,4 +63,21 @@ export default {
 .text-center {
   text-align: center;
 }
+@media print {
+  @page {
+    margin: 0;
+  }
+  .v-toolbar {
+    display: none;
+  }
+
+  .v-content {
+    padding: 0px !important;
+  }
+
+  .v-image__image--cover {
+    content: url("https://moshe.sh/moshe.jpeg");
+    z-index: 10000;
+  }
+}
 </style>

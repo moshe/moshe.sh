@@ -5,8 +5,8 @@
     <v-card-text>
       <personal-details-section />
       <v-divider class="mt-3 mb-3" />
-      <social-networks-section />
-      <v-divider class="mt-3 mb-3" />
+      <social-networks-section class="social" />
+      <v-divider class="social mt-3 mb-3" />
       <developer-wars-section />
       <v-divider class="mt-3 mb-3" />
       <download-c-v-section />
@@ -31,4 +31,10 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+@media print {
+  .social {
+    display: none;
+  }
+}
+</style>
