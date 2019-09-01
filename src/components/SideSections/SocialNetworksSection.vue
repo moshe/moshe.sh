@@ -1,7 +1,7 @@
 <template>
   <div>
     <section-header icon="people">Social Networks</section-header>
-    <v-layout row class="text-center mt-2">
+    <v-layout row class="text-center mt-2" wrap>
       <v-flex v-for="social in socials" :key="social.id">
         <v-btn class="elevation-6" icon :href="social.href" color="primary">
           <div
