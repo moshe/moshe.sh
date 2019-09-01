@@ -1,11 +1,12 @@
 <template>
   <v-toolbar app>
-    <div class="mr-4 chmod">
+    <span class="mr-4 chmod">
       chmod +x ./moshe.sh
-    </div>
+      <span class="blink">&nbsp;</span>
+    </span>
 
     <v-spacer />
-    <v-toolbar-items>
+    <v-toolbar-items class="hidden-sm-and-down">
       <v-btn
         v-for="item in items"
         :key="item.name"
@@ -53,18 +54,12 @@ export default {
 
 <style scoped>
 .chmod {
-  /* font-family: monospace; */
   font-family: Monaco, Arial, Helvetica, sans-serif;
   font-size: 20px;
   line-height: 20px;
-  position: relative;
 }
 
-.chmod::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: -20px;
+.blink {
   background-color: #00c853;
   width: 10px;
   height: 20px;
