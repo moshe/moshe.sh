@@ -5,7 +5,7 @@
     >
     <v-layout class="mt-2" row v-for="line of details" :key="line.key">
       <v-flex xs4>
-        <div style="font-weight: 600">{{ line.key }}</div>
+        <div style="font-weight: 500">{{ line.key }}</div>
       </v-flex>
       <v-flex xs8>{{ line.value }}</v-flex>
     </v-layout>

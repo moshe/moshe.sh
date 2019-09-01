@@ -3,7 +3,7 @@
     <section-header icon="thumbs_up_down">Holy Wars</section-header>
     <v-layout class="mt-2" row v-for="line of details" :key="line.key">
       <v-flex xs9>
-        <div style="font-weight: 600">
+        <div style="font-weight: 500">
           {{ line.options[0] }} vs {{ line.options[1] }}
         </div>
       </v-flex>
