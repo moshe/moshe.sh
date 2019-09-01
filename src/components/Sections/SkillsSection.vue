@@ -3,7 +3,7 @@
     <v-layout column v-for="skill in skills" :key="skill.name" class="skill">
       <v-flex xs12>
         <v-layout align-center justify-start row>
-          <v-flex xs4>
+          <v-flex xs6 md4>
             <div class="text-uppercase subheading sub">
               {{ skill.name }}
             </div>
@@ -40,13 +40,13 @@ export default {
           name: "Python",
           level: 5,
           desc:
-            "8 years of experience, wrote several ETL services, web services, mixed python2 and python3"
+            "8 years of experience, mixed with production critical systems, web services, data ETLs, deployment and monitoring"
         },
         {
           name: "ElasticSearch",
           level: 5,
           desc:
-            "Managed several production clusters in different workloads. 1TB/day logs cluster, 20TB cluster for web app and more including query optimizations"
+            "Managed several production clusters in different workloads. 1.5TB/day logs cluster, 20TB cluster for a real-time web app, query optimizations, write optimizations and more"
         },
         {
           name: "VueJS",
@@ -64,7 +64,7 @@ export default {
           name: "linux",
           level: 5,
           desc:
-            "Good understandig and knowledge of the linux internals. several years of managing physical data centers."
+            "Deep understandig and knowledge of the linux internals. several years of managing physical data center"
         },
         {
           name: "and more ...",
