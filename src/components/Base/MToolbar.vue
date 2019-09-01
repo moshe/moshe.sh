@@ -61,8 +61,6 @@ export default {
 
 .blink {
   background-color: #00c853;
-  width: 10px;
-  height: 20px;
   -webkit-animation: blink 1s step-end infinite;
   animation: blink 1s step-end infinite;
 }
