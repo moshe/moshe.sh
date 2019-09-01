@@ -1,25 +1,21 @@
 <template>
   <div>
     <section-header icon="people">Social Networks</section-header>
-    <div class="text-center mt-2">
-      <v-btn
-        v-for="social in socials"
-        :key="social.name"
-        class="mr-3 elevation-6"
-        icon
-        :href="social.href"
-      >
-        <svg
-          role="img"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-          style="height: 20px;"
-        >
-          <title>{{ social.name }}</title>
-          <path :d="social.d"></path>
-        </svg>
-      </v-btn>
-    </div>
+    <v-layout row class="text-center mt-2">
+      <v-flex v-for="social in socials" :key="social.name">
+        <v-btn class="elevation-6" icon :href="social.href">
+          <svg
+            role="img"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            style="height: 20px;"
+          >
+            <title>{{ social.name }}</title>
+            <path :d="social.d"></path>
+          </svg>
+        </v-btn>
+      </v-flex>
+    </v-layout>
   </div>
 </template>
 
