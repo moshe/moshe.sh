@@ -1,16 +1,14 @@
 <template>
   <div class="text-center">
     <v-btn color="blue-grey" class="white--text">
-      Download as PDF
-      <v-icon right>cloud_download</v-icon>
+      <v-icon left v-text="'cloud_download'" />
+      Download CV
     </v-btn>
   </div>
 </template>
 
 <script>
-export default {
-  name: "DownloadCVSection"
-};
+export default {};
 </script>
 
 <style scoped></style>
