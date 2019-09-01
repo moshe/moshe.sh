@@ -12,7 +12,9 @@
       >
         {{ chip.name }}
       </v-chip>
-      <br />
+      <div v-if="project.note" class="caption grey--text">
+        {{ project.note }}
+      </div>
       <div v-for="line in project.desc" :key="line">
         {{ line }}
       </div>
@@ -41,8 +43,8 @@ export default {
       projects: [
         {
           name: "Kipp - Secure Payments App",
+          note: "Discontinued project",
           desc: [
-            "Discontinued project",
             "POC for a simple and secure payments app using One-Time-Code to initiate the transaction"
           ],
           link: "https://github.com/ikimia/kipp",
@@ -50,9 +52,10 @@ export default {
         },
         {
           name: "Elasticsearch Comrade",
+          note: "Work in progress",
           desc: ["Elasticsearch admin panel built for ops and monitoring"],
           link: "https://github.com/moshe/elasticsearch-comrade",
-          chips: [chips.wip, chips.python, chips.vueJs, chips.js]
+          chips: [chips.python, chips.vueJs, chips.js]
         },
         {
           name: "Tomato Bot",
