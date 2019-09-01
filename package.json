@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "vue": "^2.6.6",
-    "vuetify": "^1.5.5"
+    "vuetify": "^1.5.18"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.5.0",
