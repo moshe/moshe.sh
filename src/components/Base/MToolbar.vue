@@ -1,7 +1,7 @@
 <template>
   <v-toolbar app>
     <span class="mr-4 chmod">
-      chmod +x ./moshe.sh
+      $ chmod +x ./moshe.sh
       <span class="blink">&nbsp;</span>
     </span>
 
@@ -57,6 +57,7 @@ export default {
   font-family: Monaco, Arial, Helvetica, sans-serif;
   font-size: 20px;
   line-height: 20px;
+  cursor: pointer;
 }
 
 .blink {
