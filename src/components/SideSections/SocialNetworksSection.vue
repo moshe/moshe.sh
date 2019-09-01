@@ -12,17 +12,19 @@
           />
         </v-btn>
       </v-flex>
-      <v-btn class="elevation-6" icon :href="so.href" color="primary">
-        <svg
-          role="img"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-          style="height: 20px;fill:white"
-        >
-          <title>{{ so.name }}</title>
-          <path :d="so.d"></path>
-        </svg>
-      </v-btn>
+      <v-flex>
+        <v-btn class="elevation-6" icon :href="so.href" color="primary">
+          <svg
+            role="img"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            style="height: 20px;fill:white"
+          >
+            <title>{{ so.name }}</title>
+            <path :d="so.d"></path>
+          </svg>
+        </v-btn>
+      </v-flex>
     </v-layout>
   </div>
 </template>
