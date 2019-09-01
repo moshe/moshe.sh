@@ -5,23 +5,23 @@
         <v-layout align-center justify-start row>
           <v-flex xs4>
             <div class="text-uppercase subheading sub">
-              {{skill.name}}
+              {{ skill.name }}
             </div>
           </v-flex>
           <v-flex>
             <v-rating
-                    readonly
-                    :dense="true"
-                    small
-                    v-model="skill.level"
-                    color="yellow darken-1"
-                    background-color="grey darken-2"
-                    empty-icon="$vuetify.icons.ratingFull"
+              readonly
+              :dense="true"
+              small
+              v-model="skill.level"
+              color="yellow darken-1"
+              background-color="grey darken-2"
+              empty-icon="$vuetify.icons.ratingFull"
             />
           </v-flex>
         </v-layout>
         <div>
-          {{skill.desc}}
+          {{ skill.desc }}
         </div>
       </v-flex>
     </v-layout>
@@ -29,7 +29,7 @@
 </template>
 
 <script>
-import MSection from '../Base/MSection.vue';
+import MSection from "../Base/MSection.vue";
 
 export default {
   components: { MSection },
@@ -37,51 +37,57 @@ export default {
     return {
       skills: [
         {
-          name: 'Python',
+          name: "Python",
           level: 5,
-          desc: '8 years of experience, wrote several ETL services, web services, mixed python2 and python3',
+          desc:
+            "8 years of experience, wrote several ETL services, web services, mixed python2 and python3"
         },
         {
-          name: 'ElasticSearch',
+          name: "ElasticSearch",
           level: 5,
-          desc: 'Managed several production clusters in different workloads. 1TB/day logs cluster, 20TB cluster for web app and more including query optimizations',
+          desc:
+            "Managed several production clusters in different workloads. 1TB/day logs cluster, 20TB cluster for web app and more including query optimizations"
         },
         {
-          name: 'VueJS',
+          name: "VueJS",
           level: 5,
-          desc: 'Three years of experience of writing web applications using VueJs, including this CV page 🙂',
+          desc:
+            "Three years of experience of writing web applications using VueJs, including this CV page 🙂"
         },
         {
-          name: 'NodeJs',
+          name: "NodeJs",
           level: 5,
-          desc: 'Good undestanding of V8\'s event loop, writing backend services and performance optimizations at high-throughput low-latency systems',
+          desc:
+            "Good undestanding of V8's event loop, writing backend services and performance optimizations at high-throughput low-latency systems"
         },
         {
-          name: 'linux',
+          name: "linux",
           level: 5,
-          desc: 'Good understandig and knowledge of the linux internals. several years of managing physical data centers.',
+          desc:
+            "Good understandig and knowledge of the linux internals. several years of managing physical data centers."
         },
         {
-          name: 'and more ...',
+          name: "and more ...",
           level: 4,
-          desc: 'React Native, Jenkins, Riemann, AWS, Apache Spark, Machine Learning',
-        },
-      ],
+          desc:
+            "React Native, Jenkins, Riemann, AWS, Apache Spark, Machine Learning"
+        }
+      ]
     };
-  },
+  }
 };
 </script>
 
 <style scoped>
-  .skill:not(:last-child) {
-    margin-bottom: 20px;
-  }
-
-  .theme--dark.application .sub  {
-    color: #4FC3F7 !important;
+.skill:not(:last-child) {
+  margin-bottom: 20px;
 }
 
-.theme--light.application .sub  {
-    color: #0288D1 !important;
+.theme--dark.application .sub {
+  color: #4fc3f7 !important;
+}
+
+.theme--light.application .sub {
+  color: #0288d1 !important;
 }
 </style>

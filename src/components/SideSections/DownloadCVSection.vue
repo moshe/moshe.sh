@@ -9,10 +9,8 @@
 
 <script>
 export default {
-  name: 'DownloadCVSection',
+  name: "DownloadCVSection"
 };
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

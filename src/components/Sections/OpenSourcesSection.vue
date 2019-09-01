@@ -1,17 +1,18 @@
 <template>
   <m-section title="Open Source Projects">
     <div v-for="project in projects" :key="project.name" class="project">
-      <a :href="project.link"  class="subheading" v-text="project.name" />
+      <a :href="project.link" class="subheading" v-text="project.name" />
       <v-chip
-              v-for="chip in project.chips"
-              :key="chip.name"
-              class="chip"
-              small
-              text-color="white"
-              :color="chip.color + colorSuffix">
-        {{chip.name}}
+        v-for="chip in project.chips"
+        :key="chip.name"
+        class="chip"
+        small
+        text-color="white"
+        :color="chip.color + colorSuffix"
+      >
+        {{ chip.name }}
       </v-chip>
-      <br/>
+      <br />
       <div v-for="line in project.desc" :key="line">
         {{ line }}
       </div>
@@ -20,83 +21,85 @@
 </template>
 
 <script>
-import MSection from '../Base/MSection.vue';
+import MSection from "../Base/MSection.vue";
 
 const chips = {
-  python: { name: 'Python', color: 'indigo' },
-  vueJs: { name: 'VueJS', color: 'red' },
-  js: { name: 'Javascript', color: 'green' },
-  reactNative: { name: 'React Native', color: 'red' },
-  firebase: { name: 'Firbase', color: 'green' },
-  elasticsearch: { name: 'ElasticSearch', color: 'pink' },
-  wip: { name: 'WIP', color: 'black' },
+  python: { name: "Python", color: "indigo" },
+  vueJs: { name: "VueJS", color: "red" },
+  js: { name: "Javascript", color: "green" },
+  reactNative: { name: "React Native", color: "red" },
+  firebase: { name: "Firbase", color: "green" },
+  elasticsearch: { name: "ElasticSearch", color: "pink" },
+  wip: { name: "WIP", color: "black" }
 };
 
 export default {
   components: { MSection },
   data() {
     return {
-      colorSuffix: ' lighten-1',
+      colorSuffix: " lighten-1",
       projects: [
         {
-          name: 'Kipp - Secure Payments App',
+          name: "Kipp - Secure Payments App",
           desc: [
-            'Discontinued project',
-            'POC for a simple and secure payments app using One-Time-Code to initiate the transaction',
+            "Discontinued project",
+            "POC for a simple and secure payments app using One-Time-Code to initiate the transaction"
           ],
-          link: 'https://github.com/ikimia/kipp',
-          chips: [chips.reactNative, chips.firebase],
+          link: "https://github.com/ikimia/kipp",
+          chips: [chips.reactNative, chips.firebase]
         },
         {
-          name: 'Elasticsearch Comrade',
-          desc: ['Elasticsearch admin panel built for ops and monitoring'],
-          link: 'https://github.com/moshe/elasticsearch-comrade',
-          chips: [chips.wip, chips.python, chips.vueJs, chips.js],
+          name: "Elasticsearch Comrade",
+          desc: ["Elasticsearch admin panel built for ops and monitoring"],
+          link: "https://github.com/moshe/elasticsearch-comrade",
+          chips: [chips.wip, chips.python, chips.vueJs, chips.js]
         },
         {
-          name: 'Tomato Bot',
-          desc: ['Gain faster feedback for your tests, in GitHub'],
-          link: 'https://tomato-bot.com',
-          chips: [chips.python, chips.vueJs, chips.js],
+          name: "Tomato Bot",
+          desc: ["Gain faster feedback for your tests, in GitHub"],
+          link: "https://tomato-bot.com",
+          chips: [chips.python, chips.vueJs, chips.js]
         },
         {
-          name: 'ElasticSearch Loader',
-          desc: ['A tool for batch loading data files (json, parquet, csv, tsv) into ElasticSearch'],
-          link: 'https://github.com/moshe/elasticsearch_loader',
-          chips: [chips.python, chips.elasticsearch],
+          name: "ElasticSearch Loader",
+          desc: [
+            "A tool for batch loading data files (json, parquet, csv, tsv) into ElasticSearch"
+          ],
+          link: "https://github.com/moshe/elasticsearch_loader",
+          chips: [chips.python, chips.elasticsearch]
         },
         {
-          name: 'tplot',
-          desc: ['Easy to use plotting tool for the terminal'],
-          link: 'https://github.com/moshe/tplot/',
-          chips: [chips.js],
-        },
-      ],
+          name: "tplot",
+          desc: ["Easy to use plotting tool for the terminal"],
+          link: "https://github.com/moshe/tplot/",
+          chips: [chips.js]
+        }
+      ]
     };
-  },
+  }
 };
 </script>
 
 <style>
-  .chip {
-    font-size: 10px!important;
-    height: 16px!important;
-  }
+.chip {
+  font-size: 10px !important;
+  height: 16px !important;
+}
 
-  .v-chip .v-chip__content {
-    padding: 0 6px!important;
-    line-height: 6px;
-  }
+.v-chip .v-chip__content {
+  padding: 0 6px !important;
+  line-height: 6px;
+}
 
-  .project:not(:last-child) {
-    margin-bottom: 20px;
-  }
+.project:not(:last-child) {
+  margin-bottom: 20px;
+}
 
-  .theme--dark.application .project a {
-    color: #4FC3F7 !important;
+.theme--dark.application .project a {
+  color: #4fc3f7 !important;
 }
 
 .theme--light.application .project a {
-    color: #0288D1 !important;
+  color: #0288d1 !important;
 }
 </style>
