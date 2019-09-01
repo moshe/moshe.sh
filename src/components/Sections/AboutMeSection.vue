@@ -1,7 +1,7 @@
 <template>
   <m-section title="About Me">
-    My name is Moshe, I love to code everything, from deployment scripts to
-    database admin dashboards and mobile applications.
+    My name is Moshe, I love to code, from deployment scripts to database admin
+    dashboards and mobile applications.
     <br />In the last 4 and a half years, I worked at
     <a href="https://forter.com">forter</a> as a team member, team leader (Data
     science and backend) and internal tools developer.<br />I served in at the
