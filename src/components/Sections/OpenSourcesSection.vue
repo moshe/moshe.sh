@@ -31,8 +31,7 @@ const chips = {
   js: { name: "Javascript", color: "green" },
   reactNative: { name: "React Native", color: "red" },
   firebase: { name: "Firbase", color: "green" },
-  elasticsearch: { name: "ElasticSearch", color: "pink" },
-  wip: { name: "WIP", color: "black" }
+  elasticsearch: { name: "ElasticSearch", color: "pink" }
 };
 
 export default {
