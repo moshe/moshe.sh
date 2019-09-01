@@ -1,6 +1,17 @@
 <template>
   <v-card>
-    <v-img src="moshe.jpeg" />
+    <v-img
+      v-if="!hover"
+      src="moshe.jpeg"
+      @mouseover="hover = true"
+      height="320px"
+    />
+    <div
+      v-show="hover"
+      style="background-color:white; height:320px"
+      id="amazon-animation"
+      @mouseleave="hover = false"
+    />
     <v-divider class="mb-2" />
     <v-card-text>
       <personal-details-section />
@@ -19,9 +30,29 @@ import SocialNetworksSection from "./SideSections/SocialNetworksSection.vue";
 import DownloadCVSection from "./SideSections/DownloadCVSection.vue";
 import PersonalDetailsSection from "./SideSections/PersonalDetailsSection.vue";
 import DeveloperWarsSection from "./SideSections/DeveloperWarsSection.vue";
+import bodymovin from "lottie-web";
 
 export default {
+  mounted() {
+    bodymovin.loadAnimation({
+      container: document.getElementById("amazon-animation"), // Required
+      path: `bicycle.json`,
+      renderer: "svg",
+      loop: true,
+      autoplay: true
+    });
+  },
+  methods: {
+    log(t) {
+      console.log(t);
+    }
+  },
   name: "LeftCard",
+  data() {
+    return {
+      hover: false
+    };
+  },
   components: {
     DeveloperWarsSection,
     PersonalDetailsSection,

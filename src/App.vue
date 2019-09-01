@@ -14,6 +14,36 @@
           </v-layout>
         </v-container>
       </v-content>
+      <v-footer dark height="auto">
+        <v-card
+          flat
+          tile
+          style="width:100%"
+          class="primary lighten-1 white--text text-xs-center"
+        >
+          <v-card-text class="white--text pt-0">
+            Special thanks:
+            <a href="https://vuetifyjs.com" style="color:white!important">
+              Vuetify</a
+            >,
+            <a href="https://vuejs.org" style="color:white!important">VueJS</a>,
+            <a
+              href="https://lottiefiles.com/ulvosama"
+              style="color:white!important"
+            >
+              ulvosama
+            </a>
+            and
+            <a href="https://useanimations.com" style="color:white!important">
+              useAnimations
+            </a>
+          </v-card-text>
+          <v-divider></v-divider>
+          <v-card-text class="white--text">
+            &copy;2019 — <strong>Moshe Zada</strong>
+          </v-card-text>
+        </v-card>
+      </v-footer>
     </v-app>
   </div>
 </template>
