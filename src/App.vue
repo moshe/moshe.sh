@@ -34,7 +34,7 @@ export default {
   },
   data() {
     return {
-      darkMode: true
+      darkMode: false
     };
   }
 };
