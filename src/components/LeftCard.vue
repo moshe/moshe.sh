@@ -1,8 +1,6 @@
 <template>
   <v-card>
-    <v-img
-      src="https://avatars3.githubusercontent.com/u/7490448?s=460&v=4"
-    ></v-img>
+    <v-img src="moshe.jpeg" />
     <v-divider class="mb-2" />
     <v-card-text>
       <personal-details-section />
