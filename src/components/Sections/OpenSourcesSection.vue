@@ -30,7 +30,7 @@ const chips = {
   vueJs: { name: "VueJS", color: "red" },
   js: { name: "Javascript", color: "green" },
   reactNative: { name: "React Native", color: "red" },
-  firebase: { name: "Firbase", color: "green" },
+  firebase: { name: "Firbase", color: "orange" },
   elasticsearch: { name: "ElasticSearch", color: "pink" }
 };
 
