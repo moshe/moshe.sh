@@ -34,13 +34,17 @@ import bodymovin from "lottie-web";
 
 export default {
   mounted() {
-    bodymovin.loadAnimation({
-      container: document.getElementById("profile"),
-      path: `bicycle.json`,
-      renderer: "svg",
-      loop: true,
-      autoplay: true
-    });
+    setTimeout(
+      () =>
+        bodymovin.loadAnimation({
+          container: document.getElementById("profile"),
+          path: `bicycle.json`,
+          renderer: "svg",
+          loop: true,
+          autoplay: true
+        }),
+      1500
+    );
   },
   methods: {
     log(t) {
