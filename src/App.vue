@@ -22,9 +22,9 @@
           class="primary lighten-1 white--text text-xs-center"
         >
           <v-card-text class="white--text pt-0">
-            Special thanks:
-            <a href="https://vuetifyjs.com" style="color:white!important">
-              Vuetify</a
+            Built with
+            <a href="https://vuetifyjs.com" style="color:white!important"
+              >Vuetify</a
             >,
             <a href="https://vuejs.org" style="color:white!important">VueJS</a>,
             <a
@@ -38,7 +38,7 @@
               useAnimations
             </a>
           </v-card-text>
-          <v-divider></v-divider>
+          <v-divider />
           <v-card-text class="white--text">
             &copy;2019 — <strong>Moshe Zada</strong>
           </v-card-text>
@@ -98,6 +98,10 @@ export default {
     margin: 0;
   }
   .v-toolbar {
+    display: none;
+  }
+
+  .no-print {
     display: none;
   }
 
