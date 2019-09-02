@@ -9,7 +9,7 @@
     <div
       v-show="hover"
       style="background-color:white; height:320px"
-      id="amazon-animation"
+      id="profile"
       @mouseleave="hover = false"
     />
     <v-divider class="mb-2" />
@@ -35,7 +35,7 @@ import bodymovin from "lottie-web";
 export default {
   mounted() {
     bodymovin.loadAnimation({
-      container: document.getElementById("amazon-animation"), // Required
+      container: document.getElementById("profile"),
       path: `bicycle.json`,
       renderer: "svg",
       loop: true,
