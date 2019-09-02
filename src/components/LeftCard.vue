@@ -15,12 +15,12 @@
     <v-divider class="mb-2" />
     <v-card-text>
       <personal-details-section />
+      <v-divider class="no-print mt-3 mb-3" />
+      <social-networks-section class="no-print" />
       <v-divider class="mt-3 mb-3" />
-      <social-networks-section class="social" />
-      <v-divider class="social mt-3 mb-3" />
       <developer-wars-section />
-      <v-divider class="mt-3 mb-3" />
-      <download-c-v-section />
+      <v-divider class="mt-3 mb-3 no-print" />
+      <download-c-v-section class="no-print" />
     </v-card-text>
   </v-card>
 </template>
@@ -62,10 +62,4 @@ export default {
 };
 </script>
 
-<style scoped>
-@media print {
-  .social {
-    display: none;
-  }
-}
-</style>
+<style scoped></style>
