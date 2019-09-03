@@ -31,7 +31,7 @@
 
 <script>
 import SectionHeader from "../Base/SectionHeader.vue";
-import bodymovin from "lottie-web/build/player/lottie_light.min";
+import bodymovin from "lottie-web/build/player/lottie.min";
 
 export default {
   components: { SectionHeader },
@@ -39,7 +39,7 @@ export default {
     this.socials.map(x => {
       x.obj = bodymovin.loadAnimation({
         container: document.getElementById(x.id),
-        animationData: require(`@/lottie/${x.id}.json`),
+        path: `${x.id}.json`,
         renderer: "svg",
         loop: true,
         autoplay: false

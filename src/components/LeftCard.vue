@@ -36,7 +36,7 @@ import SocialNetworksSection from "./SideSections/SocialNetworksSection.vue";
 import DownloadCVSection from "./SideSections/DownloadCVSection.vue";
 import PersonalDetailsSection from "./SideSections/PersonalDetailsSection.vue";
 import DeveloperWarsSection from "./SideSections/DeveloperWarsSection.vue";
-import bodymovin from "lottie-web/build/player/lottie_light.min";
+import bodymovin from "lottie-web/build/player/lottie.min";
 
 export default {
   mounted() {
