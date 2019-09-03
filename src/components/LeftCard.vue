@@ -3,14 +3,20 @@
     <v-img
       v-if="!hover"
       src="moshe.jpeg"
-      @mouseover="hover = true"
+      @mouseover="
+        animation.play();
+        hover = true;
+      "
       height="320px"
     />
     <div
       v-show="hover"
       style="background-color:white; height:320px"
       id="profile"
-      @mouseleave="hover = false"
+      @mouseleave="
+        animation.stop();
+        hover = false;
+      "
     />
     <v-divider class="mb-2" />
     <v-card-text>
@@ -30,31 +36,26 @@ import SocialNetworksSection from "./SideSections/SocialNetworksSection.vue";
 import DownloadCVSection from "./SideSections/DownloadCVSection.vue";
 import PersonalDetailsSection from "./SideSections/PersonalDetailsSection.vue";
 import DeveloperWarsSection from "./SideSections/DeveloperWarsSection.vue";
-import bodymovin from "lottie-web";
+import bodymovin from "lottie-web/build/player/lottie_light.min";
 
 export default {
   mounted() {
     setTimeout(
       () =>
-        bodymovin.loadAnimation({
+        (this.animation = bodymovin.loadAnimation({
           container: document.getElementById("profile"),
           path: `bicycle.json`,
           renderer: "svg",
           loop: true,
-          autoplay: true
-        }),
+          autoplay: false
+        })),
       1500
     );
   },
-  methods: {
-    log(t) {
-      console.log(t);
-    }
-  },
-  name: "LeftCard",
   data() {
     return {
-      hover: false
+      hover: false,
+      animation: null
     };
   },
   components: {

@@ -31,21 +31,20 @@
 
 <script>
 import SectionHeader from "../Base/SectionHeader.vue";
-import bodymovin from "lottie-web";
+import bodymovin from "lottie-web/build/player/lottie_light.min";
 
 export default {
   components: { SectionHeader },
   mounted() {
-    this.socials.map(
-      x =>
-        (x.obj = bodymovin.loadAnimation({
-          container: document.getElementById(x.id), // Required
-          path: `${x.id}.json`,
-          renderer: "svg",
-          loop: true,
-          autoplay: false
-        }))
-    );
+    this.socials.map(x => {
+      x.obj = bodymovin.loadAnimation({
+        container: document.getElementById(x.id),
+        animationData: require(`@/lottie/${x.id}.json`),
+        renderer: "svg",
+        loop: true,
+        autoplay: false
+      });
+    });
     const twitter = this.socials[0].obj;
     twitter.play();
     setTimeout(() => {
