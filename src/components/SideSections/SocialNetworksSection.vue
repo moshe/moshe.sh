@@ -39,8 +39,8 @@ export default {
     this.socials.map(
       x =>
         (x.obj = bodymovin.loadAnimation({
-          container: document.getElementById(x.id), // Required
-          path: `${x.id}.json`,
+          container: document.getElementById(x.id),
+          animationData: require(`../../../public/${x.id}.json`),
           renderer: "svg",
           loop: true,
           autoplay: false

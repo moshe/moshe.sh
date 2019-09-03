@@ -49,7 +49,7 @@ export default {
           loop: true,
           autoplay: false
         })),
-      500
+      1500
     );
   },
   data() {
