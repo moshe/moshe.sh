@@ -113,5 +113,10 @@ export default {
     content: url("https://moshe.sh/moshe.jpeg");
     z-index: 10000;
   }
+
+  .elevation-24 {
+    box-shadow: none !important;
+    border: 1px solid #d7d7d7 !important;
+  }
 }
 </style>
