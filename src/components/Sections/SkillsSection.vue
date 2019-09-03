@@ -70,7 +70,7 @@ export default {
           name: "and more ...",
           level: 4,
           desc:
-            "Docker, AWS, React Native, Jenkins, Riemann, AWS, Apache Spark, Machine Learning"
+            "Docker, AWS, React Native, Jenkins, Riemann, Apache Spark, Machine Learning"
         }
       ]
     };

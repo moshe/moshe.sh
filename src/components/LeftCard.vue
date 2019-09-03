@@ -3,14 +3,20 @@
     <v-img
       v-if="!hover"
       src="moshe.jpeg"
-      @mouseover="hover = true"
+      @mouseover="
+        animation.play();
+        hover = true;
+      "
       height="320px"
     />
     <div
       v-show="hover"
       style="background-color:white; height:320px"
       id="profile"
-      @mouseleave="hover = false"
+      @mouseleave="
+        animation.stop();
+        hover = false;
+      "
     />
     <v-divider class="mb-2" />
     <v-card-text>
@@ -36,25 +42,20 @@ export default {
   mounted() {
     setTimeout(
       () =>
-        bodymovin.loadAnimation({
+        (this.animation = bodymovin.loadAnimation({
           container: document.getElementById("profile"),
           path: `bicycle.json`,
           renderer: "svg",
           loop: true,
-          autoplay: true
-        }),
-      1500
+          autoplay: false
+        })),
+      500
     );
   },
-  methods: {
-    log(t) {
-      console.log(t);
-    }
-  },
-  name: "LeftCard",
   data() {
     return {
-      hover: false
+      hover: false,
+      animation: null
     };
   },
   components: {
