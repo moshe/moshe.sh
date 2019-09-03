@@ -31,7 +31,7 @@
 
 <script>
 import SectionHeader from "../Base/SectionHeader.vue";
-import bodymovin from "lottie-web";
+import bodymovin from "lottie-web/build/player/lottie_light.min";
 
 export default {
   components: { SectionHeader },
