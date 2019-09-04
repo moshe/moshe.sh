@@ -118,5 +118,15 @@ export default {
     box-shadow: none !important;
     border: 1px solid #d7d7d7 !important;
   }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  .theme--light.v-sheet {
+    background-color: white;
+  }
+  .theme--light.application {
+    background-color: white;
+  }
 }
 </style>
