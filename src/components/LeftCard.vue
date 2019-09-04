@@ -18,8 +18,8 @@
     <v-divider class="mb-2" />
     <v-card-text>
       <personal-details-section />
-      <v-divider class="no-print mt-3 mb-3" />
-      <social-networks-section class="no-print" />
+      <v-divider class="mt-3 mb-3" />
+      <social-networks-section />
       <v-divider class="mt-3 mb-3" />
       <developer-wars-section />
       <v-divider class="mt-3 mb-3 no-print" />

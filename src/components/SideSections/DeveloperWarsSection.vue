@@ -22,8 +22,7 @@ export default {
     return {
       details: [
         { options: ["vim", "emacs"], chose: 0 },
-        { options: ["tabs", "spaces"], chose: 1 },
-        { options: ["absolute", "relative import"], chose: 0 }
+        { options: ["tabs", "spaces"], chose: 1 }
       ]
     };
   }

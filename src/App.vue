@@ -69,6 +69,9 @@ export default {
 </script>
 
 <style>
+.print-only {
+  display: none;
+}
 .theme--light.application {
   background: #eeeeee;
 }
@@ -96,6 +99,9 @@ export default {
 @media print {
   @page {
     margin: 0;
+  }
+  .print-only {
+    display: flex;
   }
   .v-toolbar {
     display: none;
