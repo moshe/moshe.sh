@@ -25,7 +25,7 @@ export default {
         { key: "AGE", value: "28" },
         { key: "LOCATION", value: "Tel-Aviv, Israel" },
         { key: "PHONE", value: "+972-54-6811459" },
-        { key: "E-MAIL", value: "cv@moshe.sh" }
+        { key: "E-MAIL", value: "me@moshe.sh" }
       ]
     };
   }
