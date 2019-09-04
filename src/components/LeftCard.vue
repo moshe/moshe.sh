@@ -1,17 +1,14 @@
 <template>
   <v-card>
     <v-img
-      v-if="!hover"
+      v-show="!hover"
+      id="profileimage"
       src="moshe.jpeg"
-      @mouseover="
-        animation.play();
-        hover = true;
-      "
-      height="320px"
+      @mouseover="mouseover"
     />
     <div
       v-show="hover"
-      style="background-color:white; height:320px"
+      :style="{ backgroundColor: 'white', height: `${h}px` }"
       id="profile"
       @mouseleave="
         animation.stop();
@@ -39,6 +36,12 @@ import DeveloperWarsSection from "./SideSections/DeveloperWarsSection.vue";
 import bodymovin from "lottie-web/build/player/lottie.min";
 
 export default {
+  components: {
+    DeveloperWarsSection,
+    PersonalDetailsSection,
+    DownloadCVSection,
+    SocialNetworksSection
+  },
   mounted() {
     setTimeout(
       () =>
@@ -49,20 +52,22 @@ export default {
           loop: true,
           autoplay: false
         })),
-      1500
+      500
     );
   },
   data() {
     return {
+      h: 0,
       hover: false,
       animation: null
     };
   },
-  components: {
-    DeveloperWarsSection,
-    PersonalDetailsSection,
-    DownloadCVSection,
-    SocialNetworksSection
+  methods: {
+    mouseover() {
+      this.h = document.querySelector("#profileimage").offsetHeight;
+      this.animation.play();
+      this.hover = true;
+    }
   }
 };
 </script>
