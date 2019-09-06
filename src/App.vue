@@ -22,7 +22,7 @@
           class="primary lighten-1 white--text text-xs-center"
         >
           <v-card-text class="white--text pt-0">
-            Built with
+            Credits:
             <a href="https://vuetifyjs.com" style="color:white!important"
               >Vuetify</a
             >,
@@ -31,9 +31,14 @@
               href="https://lottiefiles.com/ulvosama"
               style="color:white!important"
             >
-              ulvosama
-            </a>
-            and
+              ulvosama</a
+            >,
+            <a
+              href="https://lottiefiles.com/abinashmohanty"
+              style="color:white!important"
+            >
+              abinashmohanty</a
+            >, and
             <a href="https://useanimations.com" style="color:white!important">
               useAnimations
             </a>
