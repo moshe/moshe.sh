@@ -84,10 +84,10 @@ export default {
 }
 
 .theme--dark.application .sub {
-  color: #4fc3f7 !important;
+  color: #00e676 !important;
 }
 
 .theme--light.application .sub {
-  color: #0288d1 !important;
+  color: #43a047 !important;
 }
 </style>

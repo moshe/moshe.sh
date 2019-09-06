@@ -28,8 +28,8 @@ import MSection from "../Base/MSection.vue";
 const chips = {
   python: { name: "Python", color: "indigo" },
   vueJs: { name: "VueJS", color: "red" },
-  js: { name: "Javascript", color: "green" },
-  reactNative: { name: "React Native", color: "red" },
+  js: { name: "Javascript", color: "teal" },
+  reactNative: { name: "React Native", color: "purple" },
   firebase: { name: "Firbase", color: "orange" },
   elasticsearch: { name: "ElasticSearch", color: "pink" }
 };
@@ -54,7 +54,7 @@ export default {
           note: "Work in progress",
           desc: ["Elasticsearch admin panel built for ops and monitoring"],
           link: "https://github.com/moshe/elasticsearch-comrade",
-          chips: [chips.python, chips.vueJs, chips.js]
+          chips: [chips.python, chips.vueJs, chips.js, chips.elasticsearch]
         },
         {
           name: "Tomato Bot",
@@ -98,10 +98,10 @@ export default {
 }
 
 .theme--dark.application .project a {
-  color: #4fc3f7 !important;
+  color: #00e676 !important;
 }
 
 .theme--light.application .project a {
-  color: #0288d1 !important;
+  color: #43a047 !important;
 }
 </style>
