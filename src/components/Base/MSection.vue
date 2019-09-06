@@ -1,6 +1,7 @@
 <template>
   <div>
     <h3 class="headline text-center text-uppercase">{{ title }}</h3>
+    <slot name="append-title"></slot>
     <v-divider class="mb-2 mt-2" />
     <slot />
   </div>
