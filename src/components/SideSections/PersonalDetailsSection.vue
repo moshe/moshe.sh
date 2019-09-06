@@ -22,7 +22,13 @@ export default {
     return {
       details: [
         { key: "NAME", value: "Moshe Zada" },
-        { key: "AGE", value: "28" },
+        {
+          key: "AGE",
+          value:
+            new Date(
+              Date.now() - new Date("1991/03/05").getTime()
+            ).getUTCFullYear() - 1970
+        },
         { key: "LOCATION", value: "Tel-Aviv, Israel" },
         { key: "PHONE", value: "+972-54-6811459" },
         { key: "E-MAIL", value: "me@moshe.sh" }
