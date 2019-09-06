@@ -28,8 +28,11 @@
           <div
             :id="social.id"
             @mouseover="social.obj.play()"
-            @mouseleave="social.obj.stop()"
-            style="height: 20px;"
+            @mouseleave="social.obj.goToAndStop(social.frame || 0, true)"
+            :style="{
+              height: '20px',
+              transform: `scale(${social.zoom})`
+            }"
           />
         </v-btn>
       </v-flex>
@@ -52,7 +55,7 @@
 
 <script>
 import SectionHeader from "../Base/SectionHeader.vue";
-import bodymovin from "lottie-web/build/player/lottie.min";
+import bodymovin from "lottie-web";
 
 export default {
   components: { SectionHeader },
@@ -65,12 +68,20 @@ export default {
         loop: true,
         autoplay: false
       });
+      if (x.frame) {
+        x.obj.goToAndStop(x.frame, true);
+      }
     });
-    const twitter = this.socials[1].obj;
-    twitter.play();
-    setTimeout(() => {
-      twitter.stop();
-    }, 4000);
+    this.animateTwitter();
+  },
+  methods: {
+    animateTwitter() {
+      const twitter = this.socials[1].obj;
+      twitter.play();
+      setTimeout(() => {
+        twitter.stop();
+      }, 4000);
+    }
   },
   data() {
     return {
@@ -79,19 +90,30 @@ export default {
           id: "Github",
           href: "https://github.com/moshe",
           obj: null,
-          username: "moshe"
+          username: "moshe",
+          zoom: 1
         },
         {
           obj: null,
           id: "Twitter",
           href: "https://twitter.com/moshe_zada",
-          username: "@moshe_zada"
+          username: "@moshe_zada",
+          zoom: 1
         },
         {
           id: "Linkedin",
           href: "https://linkedin.com/in/moshe-zada",
           obj: null,
-          username: "moshe-zada"
+          username: "moshe-zada",
+          zoom: 1
+        },
+        {
+          id: "Whatsapp",
+          href: "https://api.whatsapp.com/send?phone=972546811459",
+          username: "0546811459",
+          obj: null,
+          frame: 10,
+          zoom: 2.7
         }
       ],
       so: {
