@@ -5,7 +5,7 @@
         <m-toolbar @darkMode="x => (this.darkMode = x)" />
         <v-container fluid>
           <v-layout row wrap justify-center>
-            <v-flex xs10 sm6 md4 lg3 xl3 class="pa-4">
+            <v-flex xs12 sm6 md4 lg3 xl3 class="pa-4">
               <left-card class="elevation-24" />
             </v-flex>
             <v-flex xs12 sm12 md8 lg8 xl7 class="pa-4">
