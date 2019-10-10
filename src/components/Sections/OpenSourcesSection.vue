@@ -57,6 +57,12 @@ export default {
           chips: [chips.python, chips.vueJs, chips.js, chips.elasticsearch]
         },
         {
+          name: "Moshe.sh CV Page",
+          desc: ["The page you're looking at🙂"],
+          link: "https://github.com/moshe/moshe.sh",
+          chips: [chips.vueJs, chips.js]
+        },
+        {
           name: "Tomato Bot",
           desc: ["Gain faster feedback for your tests, in GitHub"],
           link: "https://tomato-bot.com",
