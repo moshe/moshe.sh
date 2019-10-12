@@ -3,15 +3,15 @@
     "lang" : "en",
     "name" : "Moshe Zada - Software developer for hire",
     "scope" : "/",
-    "display" : "browser",
+    "display" : "fullscreen",
     "start_url" : "https://moshe.sh/",
     "short_name" : "Moshe Zada",
     "theme_color" : "transparent",
     "description" : "Whether you need a fast prototype of a product, speed up your CI environment or build an internal tool to boost your employee work, drop me a line and let's chat 🙂",
     "orientation" : "any",
     "background_color" : "transparent",
-    "related_applications" : "",
-    "prefer_related_applications" : "false",
+    "related_applications" : [],
+    "prefer_related_applications" : false,
     "icons" : [
         {
             "src": "https://moshe.sh/favicon.ico",
