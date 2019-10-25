@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --modern",
+    "build": "vue-cli-service build --modern && netlify-lambda build functions",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
@@ -18,9 +18,10 @@
     "@vue/cli-service": "^3.11.0",
     "@vue/eslint-config-prettier": "^4.0.1",
     "babel-eslint": "^10.0.3",
-    "eslint-plugin-import": "^2.18.2",
     "eslint": "^5.16.0",
+    "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-vue": "^5.2.3",
+    "netlify-lambda": "^1.6.3",
     "stylus": "^0.54.7",
     "stylus-loader": "^3.0.1",
     "vue-cli-plugin-vuetify": "^1.0.1",

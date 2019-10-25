@@ -1,0 +1,6 @@
+[build]
+  functions = "functions-dist"
+[[redirects]]
+  from = "/*"
+  to = "/"
+  status = 200
