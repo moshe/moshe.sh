@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "lottie-web": "^5.5.9",
+    "universal-analytics": "^0.4.20",
     "vue": "^2.6.10",
     "vuetify": "^1.5.18"
   },
