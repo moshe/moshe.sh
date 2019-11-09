@@ -68,6 +68,7 @@ export function handler(event, context, callback) {
   const visitor = ua("UA-146865947-2");
   let GAEvent;
   const isGitHub = event.headers["user-agent"].startsWith("github-camo");
+  console.log(JSON.stringify(event));
   if (isGitHub) {
     GAEvent = githubEvent(event);
     visitor.pageview(GAEvent, console.log);
