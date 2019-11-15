@@ -67,7 +67,9 @@ function genericEvent(event) {
 export function handler(event, context, callback) {
   const visitor = ua("UA-146865947-2");
   let GAEvent;
-  const isGitHub = event.headers["user-agent"].startsWith("github-camo");
+  const isGitHub =
+    event.headers["user-agent"].startsWith("github-camo") ||
+    event.headers["user-agent"].includes("Cloudinary");
   console.log(JSON.stringify(event));
   if (isGitHub) {
     GAEvent = githubEvent(event);
